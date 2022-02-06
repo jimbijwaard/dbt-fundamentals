@@ -3,7 +3,8 @@ version: 2
 models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
-  - name: fact_orders
+  - name: fct_orders
+    description: "Tabel containing orders and successful payments made by our customers"
 
 metrics:
   - name: new_customers
