@@ -8,3 +8,4 @@ sources:
    loaded_at_field: created_on
    tables:
      - name: sessions
+     - name: users
