@@ -13,7 +13,7 @@ models:
             total_order_count:
               type: count_distinct
               timestamp: order_date
-              time_grains: [day,week,month]
+              time_grains: [week,month]
 
 metrics:
   - name: new_customers
