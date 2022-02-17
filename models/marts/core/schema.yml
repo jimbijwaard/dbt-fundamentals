@@ -7,6 +7,10 @@ models:
     description: "Tabel containing orders and successful payments made by our customers"
     columns:
       - name: order_id
+        meta:
+          metrics:
+            total_order_count:
+              type: count_distinct
 
 metrics:
   - name: new_customers
