@@ -6,7 +6,7 @@ models:
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
     columns:
-      - name: order_date
+      # - name: order_date
       - name: order_id
         meta:
           metrics:
