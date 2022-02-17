@@ -6,6 +6,12 @@ models:
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
 
+
+    meta:
+      metrics:
+        total_orders:
+          type: "sum"
+
 metrics:
   - name: new_customers
     label: New Customers
