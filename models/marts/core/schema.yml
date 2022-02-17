@@ -3,10 +3,6 @@ version: 2
 models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
-    columns:
-      - name: customer_id
-      - name: first_name
-      - name: last_name
     meta:
       metrics:
         count_unique_customer_id:
