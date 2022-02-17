@@ -4,13 +4,7 @@ models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
     columns:
-      - name: first_order_date
-      - name: most_recent_order_date
       - name: customer_id
-        meta:
-          metrics:
-            count_unique_customer_id:
-              type: count_distinct
       - name: amount
         meta:
           metrics:
