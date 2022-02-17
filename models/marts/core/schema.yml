@@ -11,7 +11,7 @@ models:
           dimension:
             label: "Order date"
             type: timestamp
-            time_intervals: ['date', 'month', 'year']
+            time_intervals: ['raw', 'month', 'year']
       - name: order_value"
         meta:
           metrics:
