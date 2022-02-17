@@ -6,13 +6,9 @@ models:
     columns:
       - name: customer_id
         meta:
-        metrics:
-          count_unique_customer_id:
-            label: "Unique Customers"
-            type: count_distinct
-            sql: customer_id
-      - name: first_name
-      - name: last_name
+          metrics:
+            count_unique_customer_id:
+              type: count_distinct
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
 
