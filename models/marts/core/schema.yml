@@ -11,9 +11,12 @@ models:
           metrics:
             count_unique_customer_id:
               type: count_distinct
+      - name: amount
+        meta:
+          metrics:
             sum_amount:
               type: sum
-              sql: amount
+
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
 
