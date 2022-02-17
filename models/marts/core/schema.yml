@@ -6,14 +6,13 @@ models:
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
     columns:
-      # - name: order_date
+      - name: order_date
+      - name: customer_id
       - name: order_id
         meta:
           metrics:
             total_order_count:
               type: count_distinct
-              timestamp: order_date
-              time_grains: [week,month]
 
 metrics:
   - name: new_customers
