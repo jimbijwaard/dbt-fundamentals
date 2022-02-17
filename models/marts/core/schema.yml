@@ -12,6 +12,11 @@ models:
             label: "Order date"
             type: timestamp
             time_intervals: ['date', 'month', 'year']
+      - name: "order_value"
+        meta:
+          metrics:
+            total_sales:
+              type: "sum"
       
 
 
