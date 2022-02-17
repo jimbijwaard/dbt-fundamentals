@@ -14,9 +14,8 @@ models:
       - name: lifetime_value
         meta:
           metrics:
-          sum_amount:
-              type: sum
-              sql: lifetime_value
+            lifetime_value:
+                type: sum
 
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
