@@ -5,6 +5,8 @@ models:
     description: "Table containing the key data about our customers"
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
+    columns:
+      - name: order_id
 
 metrics:
   - name: new_customers
