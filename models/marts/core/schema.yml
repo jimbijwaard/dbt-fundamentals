@@ -5,30 +5,29 @@ models:
     description: "Table containing the key data about our customers"
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
-    # columns:
-    #   - name: order_date
-    #   - name: customer_id
-    #   - name: order_id
-    #     meta:
-    #       metrics:
-    #         total_order_count:
-    #           type: count_distinct
 
 metrics:
-  - name: new_customers
-    label: New Customers
+  - name: customer_count
+    label: Customers
     model: ref('dim_customers')
-    description: "The number of new paying users of the product"
+    description: 'number of customers'
+    type: count_distinct
+    sql: customer_id
+  
+  # - name: new_customers
+  #   label: New Customers
+  #   model: ref('dim_customers')
+  #   description: "The number of new paying users of the product"
 
-    type: count
-    sql: user_id # superfluous here, but shown as an example
+  #   type: count
+  #   sql: user_id # superfluous here, but shown as an example
 
-    timestamp: first_order_date
-    time_grains: [day, week, month]
+  #   timestamp: first_order_date
+  #   time_grains: [day, week, month]
 
-    tags: ['Monthly Business Review', 'Core Metrics']
+  #   tags: ['Monthly Business Review', 'Core Metrics']
 
-    meta: {
-      team: Finance,
-      status: Gold certified
-    }
+  #   meta: {
+  #     team: Finance,
+  #     status: Gold certified
+  #   }
