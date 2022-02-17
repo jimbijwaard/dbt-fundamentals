@@ -3,13 +3,14 @@ version: 2
 models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
-    metrics:
-    - name: customer_count
-      label: DBT METRIC!
-      model: dim_customers
-      description: "A NEW DBT METRIC nuuuuuts"
-      type: count_distinct
-      sql: customer_id # must be a simple column name that you want to apply this metric to
+    meta:
+      metrics:
+      - name: customer_count
+        label: DBT METRIC!
+        model: dim_customers
+        description: "A NEW DBT METRIC nuuuuuts"
+        type: count_distinct
+        sql: customer_id # must be a simple column name that you want to apply this metric to
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
 
