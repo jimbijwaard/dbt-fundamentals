@@ -1,23 +1,29 @@
 version: 2
 
 metrics:
-  - name: new_customers
-    label: New Customers
-    model: ref('dim_customers')
-    description: "The number of new paying users of the product"
+  - name: total_orders
+    label: Total Orders
+    model: fct_orders
+    type: count_distinct
+    sql: order_id
 
-    type: count
-    sql: customer_id # superfluous here, but shown as an example
+  # - name: new_customers
+  #   label: New Customers
+  #   model: ref('dim_customers')
+  #   description: "The number of new paying users of the product"
 
-    timestamp: first_order_date
-    time_grains: [day, week, month]
+  #   type: count
+  #   sql: customer_id # superfluous here, but shown as an example
 
-    tags: ['Monthly Business Review', 'Core Metrics']
+  #   timestamp: first_order_date
+  #   time_grains: [day, week, month]
 
-    meta: {
-      team: Finance,
-      status: Gold certified
-    }
+  #   tags: ['Monthly Business Review', 'Core Metrics']
+
+  #   meta: {
+  #     team: Finance,
+  #     status: Gold certified
+  #   }
 
 models:
   - name: dim_customers
