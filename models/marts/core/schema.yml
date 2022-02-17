@@ -3,12 +3,16 @@ version: 2
 models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
-    meta:
-      metrics:
-        count_unique_customer_id:
-          label: "Unique Customers"
-          type: count_distinct
-          sql: customer_id
+    columns:
+      - name: customer_id
+        meta:
+        metrics:
+          count_unique_customer_id:
+            label: "Unique Customers"
+            type: count_distinct
+            sql: customer_id
+      - name: first_name
+      - name: last_name
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
 
