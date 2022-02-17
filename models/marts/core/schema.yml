@@ -4,6 +4,7 @@ models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
     columns:
+      - name: first_order_date
       - name: customer_id
         meta:
           metrics:
