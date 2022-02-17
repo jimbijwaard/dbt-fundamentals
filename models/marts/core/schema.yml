@@ -5,14 +5,14 @@ models:
     description: "Table containing the key data about our customers"
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
-    columns:
-      - name: order_date
-      - name: customer_id
-      - name: order_id
-        meta:
-          metrics:
-            total_order_count:
-              type: count_distinct
+    # columns:
+    #   - name: order_date
+    #   - name: customer_id
+    #   - name: order_id
+    #     meta:
+    #       metrics:
+    #         total_order_count:
+    #           type: count_distinct
 
 metrics:
   - name: new_customers
