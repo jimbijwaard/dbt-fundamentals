@@ -7,20 +7,28 @@ models:
     description: "Tabel containing orders and successful payments made by our customers"
 
 metrics:
-  - name: new_customers
-    label: New Customers
-    model: ref('dim_customers')
-    description: "The number of new paying users of the product"
+  - name: customer_count
+    label: DBT METRIC!
+    model: dim_customers
+    description: "A NEW DBT METRIC nuuuuuts"
+    type: count_distinct
+    sql: customer_id # must be a simple column name that you want to apply this metric to
 
-    type: count
-    sql: customer_id # superfluous here, but shown as an example
+# metrics:
+#   - name: new_customers
+#     label: New Customers
+#     model: ref('dim_customers')
+#     description: "The number of new paying users of the product"
 
-    timestamp: first_order_date
-    time_grains: [day, week, month]
+#     type: count
+#     sql: customer_id # superfluous here, but shown as an example
 
-    tags: ['Monthly Business Review', 'Core Metrics']
+#     timestamp: first_order_date
+#     time_grains: [day, week, month]
 
-    meta: {
-      team: Finance,
-      status: Gold certified
-    }
+#     tags: ['Monthly Business Review', 'Core Metrics']
+
+#     meta: {
+#       team: Finance,
+#       status: Gold certified
+#     }
