@@ -4,12 +4,19 @@ models:
   - name: dim_customers
     description: "Table containing the key data about our customers"
     columns:
+      - name: first_order_date
+      - name: most_recent_order_date
       - name: customer_id
-      - name: amount
         meta:
           metrics:
-            sum_amount:
+            count_unique_customer_id:
+              type: count_distinct
+      - name: lifetime_value
+        meta:
+          metrics:
+          sum_amount:
               type: sum
+              sql: lifetime_value
 
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
