@@ -5,16 +5,22 @@ models:
     description: "Table containing the key data about our customers"
   - name: fct_orders
     description: "Tabel containing orders and successful payments made by our customers"
-    columns:
-      - name: order_date
-        meta:
-          dimension:
-            label: "Order date"
-            type: timestamp
-            time_intervals: ['raw', 'month', 'year']
-      - name: order_value"
-        meta:
-          metrics:
-            total_sales:
-              type: "sum"
-      
+
+metrics:
+  - name: new_customers
+    label: New Customers
+    model: ref('dim_customers')
+    description: "The number of new paying users of the product"
+
+    type: count
+    sql: user_id # superfluous here, but shown as an example
+
+    timestamp: first_order_date
+    time_grains: [day, week, month]
+
+    tags: ['Monthly Business Review', 'Core Metrics']
+
+    meta: {
+      team: Finance,
+      status: Gold certified
+    }
