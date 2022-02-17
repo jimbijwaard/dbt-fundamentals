@@ -9,7 +9,7 @@ models:
 metrics:
   - name: customer_count
     label: Customers
-    model: ref('dim_customers')
+    model: dim_customers
     description: 'number of customers'
     type: count_distinct
     sql: customer_id
