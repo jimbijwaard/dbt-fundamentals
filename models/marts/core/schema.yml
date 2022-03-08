@@ -7,11 +7,6 @@ models:
     description: "Tabel containing orders and successful payments made by our customers"
 
 
-    meta:
-      metrics:
-        total_orders:
-          type: "sum"
-
 metrics:
   - name: new_customers
     label: New Customers
@@ -19,7 +14,7 @@ metrics:
     description: "The number of new paying users of the product"
 
     type: count
-    sql: user_id # superfluous here, but shown as an example
+    sql: customer_id # superfluous here, but shown as an example
 
     timestamp: first_order_date
     time_grains: [day, week, month]
@@ -30,3 +25,8 @@ metrics:
       team: Finance,
       status: Gold certified
     }
+
+
+
+
+
