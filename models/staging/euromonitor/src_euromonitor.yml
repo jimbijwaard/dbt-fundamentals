@@ -1,6 +1,6 @@
 version: 2
 sources:
- - name: euromonitor_base_data
+ - name: euromonitor
    database: raw
    schema: euromonitor
    tables:
