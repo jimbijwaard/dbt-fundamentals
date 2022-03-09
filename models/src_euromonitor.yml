@@ -1,0 +1,7 @@
+version: 2
+sources:
+ - name: euromonitor_base_data
+   database: raw
+   schema: euromonitor
+   tables:
+     - name: market_sizing_data
