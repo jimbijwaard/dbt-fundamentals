@@ -1,0 +1,7 @@
+version: 2
+sources:
+ - name: shopify
+   database: raw
+   schema: airbyte_shopify
+   tables:
+     - name: inventory_items
