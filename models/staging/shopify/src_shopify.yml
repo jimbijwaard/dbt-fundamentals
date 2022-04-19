@@ -1,7 +1,7 @@
 version: 2
 sources:
  - name: shopify
-   database: raw
-   schema: airbyte_shopify
+   database: airbyte_database
+   schema: airbyte_schema
    tables:
      - name: inventory_items
